@@ -1,0 +1,108 @@
+*{
+font-size: 14px;
+font-family:Georgia, 'Times New Roman', Times, serif
+}
+H1{
+    font-size: large;
+    color: blue;
+}
+#principal{
+    font-weight: 900;
+    color: green;
+}
+.negrita{
+    font-weight: 900;
+}
+.italica{
+    font-style: italic;
+}
+.bordes{
+    border: 2px dotted red;
+    padding: 5px;
+    border-radius: 10px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+} /*combinacioes combinaciones multiples(,)*/
+    /*th{border: 1px solid black}   
+    td{border: 1px solid black}   */
+    th,td{border: 1px solid black;}
+/*combinacion decendente*/
+    .contenedor1 p{
+        background-color: greenyellow;
+    }
+    .contenedor2 > p{
+background-color: plum;
+    }
+/* combinaciones hermano adyacente*/
+    .contenedor3,
+    .contenedor4
+    {
+        display: flex;
+    }
+     .contenedor3>div,
+     .contenedor4>div{
+        width: 30px;
+        height: 30px;
+        border: 1px dotted dodgerblue;
+        text-align: center;
+        margin-left: 2px;
+    }
+    h4 + div{
+        border-radius: 50%;
+        background-color: lightgoldenrodyellow;
+
+    }
+    /*combinaciones de todos los hermanos(~)*/
+    h5 ~ div{
+    border-radius: 50%;
+    background-color: lightgoldenrodyellow;
+ }
+
+ a{
+    text-decoration: none;
+}
+a:link{color: red;}
+a:visited{color: green;}
+a:hover{background-color: yellow;}
+a:active{color: chocolate;}
+#txtFocus:focus{
+    background-color: lightgreen;
+}
+#btn{
+    background-color: red;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+#btn:hover{
+    background-color: blue;
+    color: yellow;
+    font-weight: 600;
+}
+#btn2{
+    background-color: red;
+    padding: 14px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50%;
+    color: white;
+}
+#btn2:hover{
+    background-color: black;
+    color: yellow;
+    font-weight: 600;
+    cursor: crosshair;
+}
+
+/* first child last child*/
+ul li:first-child{color: blue;}
+ul li:last-child{color: red;}
+ul li:nth-child(3n-1){background-color: blue;}
+ul li:nth-child(even){background-color: green;}
+ul li:nth-child(odd){background-color: lightcoral;}
+/*@rules*/

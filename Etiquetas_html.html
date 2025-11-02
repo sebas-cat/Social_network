@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!---<!DOCTYPE html>
 <html>
   <head>
     <title>Etiquetas HTML</title>
@@ -66,4 +66,230 @@
       </map>
     </body>
   </head>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Etiquetas HTML</title>
+    <style></style>
+    <html lang="es">
+    <body>
+      <h1>Etiquetas html</h1>
+      <h2>li</h2>
+      <p>LI declara los elementos como una lista</p>
+      <li>Clase 1</li>
+      <li>Clase 2</li>
+      <li>Clase 3</li>
+      <h2>mark</h2>
+      <p>mark resalta un texto para mostrar importancia</p>
+      <p><mark> NO OLVIDAR PAGO DE TRABAJADORES </mark></p>
+      <h2>map</h2>
+      <p>Crea un mapa de imagenes las cuales se pueden clickear</p>
+      <p><small>elije USA,EUROPA,ASIA</small></p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Physical_World_Map.svg/500px-Physical_World_Map.svg.png"
+        alt="Guerra en el mundo"
+        usemap="#mapadelmundo"
+      />
+
+      <map name="mapadelmundo">
+        <area
+          shape="circle"
+          coords="110,110,40"
+          href="https://es.wikipedia.org/wiki/Guerra_de_Secesi%C3%B3n"
+          alt="civil war"
+        />
+
+        <area
+          shape="circle"
+          coords="255,40,25"
+          href="https://es.wikipedia.org/wiki/Segunda_Guerra_Mundial"
+          alt="Europa"
+        />
+        />
+
+        <area
+          shape="circle"
+          coords="365,105,55"
+          href="https://es.wikipedia.org/wiki/Guerras_del_Opio"
+          alt="Asia"
+        />
+         </map>
+        <h2>menu</h2>
+        <p>una lista desordenada de datos(usa li como apoyo)</p>
+        <menu>
+          <li>Sebastian V</li>
+          <li>Sebastian R</li>
+          <li>Karoline</li>
+          <h2>meter</h2>
+           </menu>
+          <p>Se usa para mostrar rangos escalares medibles dentro de un rango
+            definido</p>
+          <meter value="0.2" min="0" max="1">24%</meter> 24%
+          <h1>nav</h1>
+          <p>Define secciones de navegación</p>
+          <li><a href="https://www.google.com/">google</a></li>
+          
+          <h2>object</h2>
+         <p>Se usa para insertar contenido externo</p>
+         <object data="https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962.jpg" 
+          type="image/jpeg" 
+          width="600" height="400">
+         </object>
+       
+      <h2>ol</h2>
+      <p>
+        Esta etiqueta permite colocar viñetas a un elemento, puede ser con
+        numeración o alfabeticamente
+      </p>
+      <h3>Viñetas numéricas</h3>
+      <ol>
+        <li>ejemplo1</li>
+        <li>ejemplo2</li>
+        <li>ejemplo3</li>
+      </ol>
+      <h3>Viñetas alfabéticas</h3>
+      <ol type="a">
+        <li>ejemplo1</li>
+        <li>ejemplo2</li>
+        <li>ejemplo3</li>
+      </ol>
+
+      <h2>option</h2>
+      <p>
+        Se utiliza normalmente para definir los elementos a escoger de un menú
+        desplegable
+      </p>
+      <label for="estadocivil">Estado Civil:</label>
+      <select id="estadocivil">
+        <option value="">Indefinido</option>
+        <option value="">Casadx</option>
+        <option value="">Solterx</option>
+        <option value="">Unión Libre</option>
+      </select>
+
+      <h2>optgroup</h2>
+      <p>
+        Permite agrupar los elementos "option", permitiendo organizarlos por
+        categorias en el menú desplegable
+      </p>
+      <label for="ejemplo">Optgroup Ejemplo</label>
+      <select id="ejemplo">
+        <optgroup label="Grupo 1">
+          <option value="">opcion 1.1</option>
+          <option value="">opcion 1.2</option>
+        </optgroup>
+
+        <optgroup label="Grupo 2">
+          <option value="">opcion 2.1</option>
+          <option value="">opcion 2.2</option>
+        </optgroup>
+      </select>
+
+      <h2>output</h2>
+      <p>Esta etiqueta permite desplegar el resultado de un operación 
+        realizada por el ususario
+       </p>
+      <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" name="a" value="0" /> +
+        <input type="number" id="b" name="b" value="0" /> =
+        <output name="result" for="a b">3</output>
+      </form>
+
+      <h2>p</h2>
+      <p>Esta etiqueta permite colocar párrafos o bloques de texto</p>
+      <p>--Esto es un ejemplo de un párrafo--</p>
+
+      <h2>param</h2>
+      <p>
+        Esta etiqueta se encuentra obsoleta y en muchos navegadores no es
+        admitida, pero anteriormente era utilizada para otorgar parámetros a un
+        elemento "object", es decir, indica al navegador cómo debe comportarse
+        ese elemento
+      </p>
+      <object data="SILABO.pdf" type="application/pdf" width="300" height="400">
+        <param name="view" value="FitH">
+        <param name="scrollbar" value="true">
+      </object>
+
+      <h2>pre</h2>
+      <p>Permite desplegar un bloque de texto preformateado, lo que implica que se va
+        a presentar como tal esté escrito. 
+      </p>
+      <pre>
+         *
+        ***
+       *****
+      *******
+      </pre>
+
+      <h2>progress</h2>
+      <p>La etiqueta <code>progress</code> se utiliza para representar el
+         progreso de una tarea en curso, mostrando qué parte ya está completada.
+      </p>
+      <progress value="40" max="100"></progress> 40%
+
+      <h2>q</h2>
+      <p>La etiqueta <code>q</code> se utiliza para representar citas cortas
+         dentro del texto.
+      </p>
+      <p>Einstein dijo: <q>La imaginación es más importante que el conocimiento.</q></p>
+
+      <h2>ruby</h2>
+      <p>La etiqueta <code>ruby</code> se utiliza para mostrar anotaciones sobre 
+        caracteres, muy común en idiomas asiáticos. Funciona junto con 
+        <code>rt</code> y <code>rp</code>.
+      </p>
+      <ruby>
+        漢 <rt>Kan</rt>
+        字 <rt>Ji</rt>
+        <rp>(</rp><rt>Caracter chino</rt><rp>)</rp>
+      </ruby>
+
+       <h2>rt</h2>
+      <p>Permite definir una explicación o pronunciación en una anotación ruby</p>
+      <ruby>
+         漢 <rt> ㄏㄢˋ </rt>
+      </ruby>
+
+      <h2>rp</h2>
+      <p>Permite proporcionar un paréntesis alrededor de un texto ruby,
+        ayuda a definir qué mostrará el navegador si no admite anotaciones ruby
+      </p>
+      <ruby>
+        漢 <rp>(</rp><rt>ㄏㄢˋ</rt><rp>)</rp>
+      </ruby>
+
+      <h2>samp</h2>
+      <p>La etiqueta <code>samp</code> se utiliza para mostrar ejemplos de salida
+         de un programa o sistema.
+      </p>
+      <p><samp>Error 404: Página no encontrada</samp></p>
+
+    </body>
+  </head>
+</html>
+--->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo BDO y Blockquote</title>
+</head>
+<body>
+    <h2>bdo</h2>
+    <p>
+    se utiliza para cambiar la dirección del texto.</p>
+    <p>Hola Mundo</p> 
+        <bdo dir="rtl">Hola Mundo</bdo>
+    </p>
+
+
+
+  
+  <h2>blockquote</h2>
+    <p> se utiliza para citar un fragmento de texto de otra fuente.</p>
+    <blockquote cite="https://es.wikipedia.org/wiki/HTML">
+    </blockquote>
+</body>
 </html>

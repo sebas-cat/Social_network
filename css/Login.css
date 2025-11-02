@@ -1,0 +1,49 @@
+body
+{
+    background-color:#2e0e3d
+
+}
+.img
+{
+    position: relative;
+    top: 220px;
+}
+.div_login{
+    background-color: white;
+    border-radius: 50px;
+    margin: auto;
+    box-shadow:inset;
+    padding: 40px;
+    width: 400px;
+    left: 300px;
+    position: relative;
+    top: -100px;
+    height:300px;
+}
+.button
+{
+    background-color: #2e0e3d;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    left: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+input{
+     position: relative;
+    left: 100px;
+    
+}
+a{
+     position: relative;
+    left: 100px;
+    display: inline-block;
+    
+}
+form >*{
+    margin-bottom: 20px;
+}
