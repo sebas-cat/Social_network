@@ -1,6 +1,6 @@
 body
 {
-    background-color:#2e0e3d
+    background-color:#26053b;
 
 }
 .img
@@ -17,12 +17,12 @@ body
     width: 400px;
     left: 300px;
     position: relative;
-    top: -100px;
-    height:300px;
+    top: -210px;
+    height:400px;
 }
 .button
 {
-    background-color: #2e0e3d;
+    background-color: #26053b;
     border-radius: 10px;
     color: white;
     position: relative;
