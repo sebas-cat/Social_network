@@ -1,0 +1,117 @@
+
+body {
+    margin: 0;
+    background-color: #26053b;  
+    font-family: 'Montserrat', sans-serif;
+    
+    /* Acomodar todo vertical y centrado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LOGO SUPERIOR */
+header {
+    width: 100%;
+    text-align: left;
+    padding-left: 170px;
+    margin-top: 30px;
+}
+
+/* Tamaño logo */
+.foto {
+    width: 100px;
+}
+
+/* Contenedor / columnas */
+.main-container {
+    display: flex; /* Diseño horizontal */
+    width: 100%; /* Ancho */
+    justify-content: space-between; /* Espacio entre columnas */
+    gap: 40px; /* Espacio entre columnas */
+}
+
+/* MENÚ LATERAL IZQUIERDO */
+.div-op {
+    background-color: white;
+    border-radius: 25px; /* Borde redondeado */
+    padding: 30px; /* borde */
+    width: 200px; /* Ancho fijo */
+    height: fit-content; /* Se ajusta al contenido */
+    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* Sombra suave */
+    margin-top: 40px; /* Altura */
+}
+
+/* Quitar los puntos de viñeta */
+.div-op ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Separación entre opciones */
+.div-op ul li {
+    margin-bottom: 25px;
+}
+
+/* Icono y nombre de la opción */
+.div-op ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre icono y nombre */
+    text-decoration: none;  
+    color: #333;
+    font-weight: 600; /* Texto más grueso */
+    font-size: 15px;
+}
+
+.div-op ul li img {
+    width: 24px;
+    opacity: 0.8; /* Icono más suave */
+}
+
+/* FEED CENTRAL                                    */
+.feed {
+    flex-grow: 1; /* Ocupa el espacio más grande */
+    max-width: 600px;       /* Limita el ancho del feed */
+    margin-top: 40px; /* Altura */
+    color: white;
+}
+
+
+/* RECOMENDADOS | MENÚ LATERAL DERECHA */
+.div-user {
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    width: 220px;
+    height: fit-content;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    margin-top: 40px; /* Altura */
+}
+
+.div-user h3 {
+    margin-top: 0;
+    color: #26053b;
+}
+
+/* Lista sin viñetas */
+.user-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Usuario sugerido */
+.user-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Icono del usuario */
+.user-list li img {
+    width: 30px;
+    border-radius: 50%;
+}
