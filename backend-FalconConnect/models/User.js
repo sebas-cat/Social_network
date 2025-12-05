@@ -38,6 +38,10 @@ const userSchema = new Schema({
     type: Boolean,
     default: true,
   },
+  password: {
+  type: String,
+  required: true
+  },
 }, {
   collection: 'users',
 });

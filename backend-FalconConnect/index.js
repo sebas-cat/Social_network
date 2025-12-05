@@ -27,23 +27,23 @@ mongoose
 // -----------------------------
 // Importar rutas de tu proyecto
 // -----------------------------
-const blockRoutes = require('./routes/block.routes');
-const calendarEventRoutes = require('./routes/calendarEvent.routes');
-const commentRoutes = require('./routes/comment.routes');
-const communityRoutes = require('./routes/community.routes');
-const courseRoutes = require('./routes/course.routes');
-const followRoutes = require('./routes/follow.routes');
-const friendRoutes = require('./routes/friend.routes');
-const likeRoutes = require('./routes/like.routes');
-const memberRoutes = require('./routes/member.routes');
-const messageRoutes = require('./routes/message.routes');
-const noteRoutes = require('./routes/note.routes');
-const notificationRoutes = require('./routes/notification.routes');
-const postRoutes = require('./routes/post.routes');
-const projectRoutes = require('./routes/project.routes');
-const reportRoutes = require('./routes/report.routes');
-const shareRoutes = require('./routes/share.routes');
-const userRoutes = require('./routes/user.routes');
+const blockRoutes = require('./routes/blockRoute');
+const calendarEventRoutes = require('./routes/calendarEventRoute');
+const commentRoutes = require('./routes/commentRoute');
+const communityRoutes = require('./routes/communityRoute');
+const courseRoutes = require('./routes/courseRoute');
+const followRoutes = require('./routes/followRoute');
+const friendRoutes = require('./routes/friendRoute');
+const likeRoutes = require('./routes/likeRoute');
+const memberRoutes = require('./routes/memberRoute');
+const messageRoutes = require('./routes/messageRoute');
+const noteRoutes = require('./routes/noteRoute');
+const notificationRoutes = require('./routes/notificationRoute');
+const postRoutes = require('./routes/postRoute');
+const projectRoutes = require('./routes/projectRoute');
+const reportRoutes = require('./routes/reportRoute');
+const shareRoutes = require('./routes/shareRoute');
+const userRoutes = require('./routes/userRoute');
 
 // -----------------------------
 // Usar rutas con prefijo /api/v1
