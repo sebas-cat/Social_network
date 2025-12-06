@@ -1,32 +1,31 @@
 const express = require('express') // Crear un servidor HTTP 
-const mongoose = require("mongoose") // Libria para conectar a MongoDB y trabajar con esquemas de datos 
+const mongoose = require("mongoose") // Libreria para conectar a MongoDB y trabajar con esquemas de datos 
 const bodyParser = require('body-parser')// Permite leer el cuerpo de las peticiones HTTP enviadas desde el frontend
 const dotenv = require('dotenv') // Permite cagar las variables del archivo env a process.env
 const cors = require('cors') // Permite que el fronted llame al backend sin que el navegador bloquee la petición 
 
 
-dotenv.config(); // Cargar variables del archivo .env
+dotenv.config(); // Cargar variables del archivo .env a process.env
 
-// Crear aplicación de Express
+// Crea una instancia de aplicación Express, encargada de manejar las rutas y middleware 
 const app = express();
 
 // Middlewares
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.json());
+app.use(cors()); //Agrega middlewares de CORS  a todas las rutas
+app.use(bodyParser.json()); // 
+app.use(express.json());  // Convierte la información JSON en objetos de javascript
 
-// -----------------------------
-// Conexión a MongoDB
-// -----------------------------
+/*
+Conexión a MongoDB
+
+Utiliza el URL guardado en env. para conectarse.
+*/
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ Conectado a MongoDB"))
-  .catch((err) => console.error("❌ Error al conectar MongoDB:", err));
+  .then(() => console.log(" Conectado a MongoDB"))
+  .catch((err) => console.error(" Error al conectar MongoDB:", err));
 
-
-// -----------------------------
-// Importar rutas de tu proyecto
-// -----------------------------
+/*Se importan las rutas */
 const blockRoutes = require('./routes/blockRoute');
 const calendarEventRoutes = require('./routes/calendarEventRoute');
 const commentRoutes = require('./routes/commentRoute');
@@ -45,9 +44,7 @@ const reportRoutes = require('./routes/reportRoute');
 const shareRoutes = require('./routes/shareRoute');
 const userRoutes = require('./routes/userRoute');
 
-// -----------------------------
-// Usar rutas con prefijo /api/v1
-// -----------------------------
+/*Prefijos de las rutas */
 app.use('/api/v1', blockRoutes);
 app.use('/api/v1', calendarEventRoutes);
 app.use('/api/v1', commentRoutes);
@@ -69,8 +66,8 @@ app.use('/api/v1', userRoutes);
 // -----------------------------
 // Levantar servidor
 // -----------------------------
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Define el puerto por donde se comunica el backend, ya sea si se definio en el env. o en 3000
 
 app.listen(PORT, () => {
-  console.log(` Servidor backend corriendo en http://localhost:${PORT}`);
+  console.log(` Servidor backend corriendo en http://localhost:${PORT}`); //Arranca el servidor
 });
