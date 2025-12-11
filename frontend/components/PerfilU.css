@@ -1,0 +1,185 @@
+/* ===== LAYOUT GENERAL ===== */
+.perfil-layout {
+  display: flex;
+  background-color: #26053b;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  color: white;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: white;
+  color: #26053b;
+  padding: 20px 25px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.menu-header {
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-link-button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background: none;
+  color: #26053b;
+  font-size: 15px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.menu-link-button:hover {
+  background-color: #f1e9ff;
+}
+
+.menu-link-button.active {
+  background-color: #4b1d70;
+  color: white;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main-content {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===== TARJETAS BASE ===== */
+.card-base {
+  background: white;
+  color: #26053b;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+/* ===== PERFIL CARD ===== */
+.profile-card {
+  text-align: center;
+}
+
+.profile-avatar-container img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #d8d8ff;
+  padding: 5px;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.profile-degree {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Stats */
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.profile-actions {
+  margin-top: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background: #4b1d70;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e3d8ff;
+  color: #26053b;
+}
+
+/* ===== INFO PERSONAL ===== */
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+/* ===== PUBLICACIONES ===== */
+.user-posts h2 {
+  margin-bottom: 15px;
+}
+
+/* Cada publicación */
+.user-post-item {
+  margin-bottom: 18px;
+  padding: 15px;
+}
+
+.user-post-item .post-description {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.mini-preview {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #666;
+}
+
+/* No hay posts */
+.no-posts-box {
+  text-align: center;
+}
+
+.no-posts-message {
+  font-size: 14px;
+  color: #666;
+}

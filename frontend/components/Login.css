@@ -1,0 +1,128 @@
+/* Fondo general */
+body {
+  background-color: #26053b;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Layout principal: imagen + login */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  height: 100vh;
+}
+
+/* Contenedor clicable del logo ULACIT */
+.img-wrapper {
+  flex: 0 0 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Imagen grande y proporcionada */
+.img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+}
+
+/* Tarjeta de login */
+.div_login {
+  background-color: white;
+  border-radius: 25px;
+  margin: auto;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 400px;
+  min-height: 400px;
+}
+
+/* Título */
+.login-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* Form */
+.login-form > * {
+  margin-bottom: 16px;
+}
+
+/* Inputs */
+input {
+  width: 80%;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Links del formulario */
+.login-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #888;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.login-link:hover {
+  color: #26053b;
+}
+
+/* Botón LOGIN */
+.button {
+  background-color: #26053b;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 30px;
+  display: block;
+  color: white;
+  margin: 12px auto 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #d32f2f;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .img-wrapper {
+    flex: 0 0 auto;
+    max-width: 320px;
+  }
+
+  .img {
+    max-width: 320px;
+  }
+
+  .div_login {
+    width: 90%;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,224 @@
+/* src/components/BuscarUsuarios.css */
+
+/* Fondo general tipo Instagram light */
+.search-layout {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #000000;
+}
+
+/* Panel central */
+.search-panel {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+/* Header */
+.search-header {
+  padding: 0 0 20px 4px;
+}
+
+.search-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Barra de búsqueda */
+.search-input {
+  width: 90%;
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #000000; /* negro */
+  color: #ffffff; /* texto blanco */
+  font-size: 14px;
+}
+.search-input::placeholder {
+  color: #d3d3d3; /* placeholder gris claro */
+}
+
+
+.search-input::placeholder {
+  color: #555555;
+}
+
+/* Texto de sección "Recent" */
+.search-section-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+/* Lista de resultados */
+.search-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+/* Scroll claro */
+.search-list::-webkit-scrollbar {
+  width: 6px;
+}
+.search-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.search-list::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 999px;
+}
+
+/* Item de usuario */
+.search-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: transparent;
+  transition: background 0.12s ease;
+}
+
+.search-item:hover {
+  background: #f1f1f1; /* hover claro */
+}
+
+/* Info de usuario */
+.search-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Textos */
+.search-user-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.search-name {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Acciones */
+.search-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Botones */
+.search-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.08s ease, opacity 0.1s ease;
+}
+
+/* Botón principal invertido */
+.search-btn.primary {
+  background: #000000;
+  color: #ffffff;
+}
+
+.search-btn.primary:hover {
+  transform: translateY(-1px);
+}
+
+/* Estado disabled invertido */
+.search-btn.primary.disabled,
+.search-btn.primary:disabled {
+  background: #d3d3d3;
+  color: #7a7a7a;
+  cursor: default;
+  transform: none;
+}
+
+/* Botón secundario invertido */
+.search-btn.secondary {
+  background: transparent;
+  color: #000;
+  border: 1px solid #b5b5b5;
+}
+
+.search-btn.secondary:hover {
+  background: #ececec;
+}
+
+/* Botón volver */
+.search-footer {
+  margin-top: 24px;
+}
+
+.search-btn.back {
+  width: 160px;
+  background: #000000; /* negro */
+  color: #ffffff; /* blanco */
+}
+
+.search-btn.back:hover {
+  background: #262626; /* gris muy oscuro al pasar mouse */
+}
+
+
+/* Mensajes */
+.search-error {
+  font-size: 13px;
+  color: #d10000;
+  margin-bottom: 8px;
+}
+
+.search-status {
+  font-size: 13px;
+  color: #15803d;
+  margin-bottom: 8px;
+}
+
+.search-empty {
+  font-size: 13px;
+  color: #555555;
+  padding: 12px 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-layout {
+    padding: 24px 12px;
+  }
+
+  .search-panel {
+    max-width: 100%;
+  }
+
+  .search-item {
+    padding: 8px 4px;
+  }
+}

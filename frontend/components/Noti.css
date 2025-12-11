@@ -1,0 +1,155 @@
+/* === CONTENEDOR GENERAL === */
+.noti-layout {
+  min-height: 100vh;
+  padding: 30px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+/* Panel centrado */
+.noti-panel {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* HEADER */
+.noti-header {
+  margin-bottom: 18px;
+}
+
+.noti-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.noti-subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* MENSAJES DE ESTADO */
+.noti-error {
+  background: rgba(176, 0, 32, 0.12);
+  color: #ffd2da;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.noti-empty {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* LISTA DE NOTIFICACIONES */
+.noti-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px;
+}
+
+.noti-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  color: #26053b;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  cursor: default;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* No leída = más contraste (rollo Insta) */
+.noti-unread {
+  background: #f2e8ff;
+  box-shadow: 0 6px 14px rgba(75, 29, 112, 0.35);
+}
+
+/* Avatar pequeño */
+.noti-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Texto + hora */
+.noti-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.noti-text {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.noti-time {
+  font-size: 11px;
+  color: #777;
+}
+
+/* Punto para marcar leído */
+.noti-dot {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  line-height: 0;
+  cursor: pointer;
+  color: #4b1d70;
+  padding: 0 4px;
+}
+
+/* FOOTER */
+.noti-footer {
+  margin-top: 10px;
+}
+
+.btn-volver {
+  margin-top: 10px;
+  padding: 9px 20px;
+  background-color: #ffffff;
+  color: #26053b;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.15s ease-in-out;
+}
+
+.btn-volver:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .noti-layout {
+    padding: 20px 12px;
+  }
+
+  .noti-title {
+    font-size: 24px;
+  }
+
+  .noti-item {
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+  .noti-avatar {
+    width: 36px;
+    height: 36px;
+  }
+}

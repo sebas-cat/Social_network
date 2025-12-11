@@ -1,0 +1,446 @@
+/* ========= BASE GENERAL ========= */
+
+body {
+  margin: 0;
+  background-color: #26053b;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* espacio para que el botón flotante no tape nada importante */
+  padding-bottom: 80px;
+}
+
+/* LOGO SUPERIOR */
+header {
+  width: 100%;
+  text-align: left;
+  padding-left: 170px;
+  margin-top: 30px;
+}
+
+/* Tamaño logo */
+.foto {
+  width: 100px;
+}
+
+/* ========= LAYOUT PRINCIPAL ========= */
+
+.main-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 40px 40px;
+  box-sizing: border-box;
+}
+
+/* MENÚ LATERAL IZQUIERDO */
+.div-op {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 30px;
+  width: 220px;
+  height: fit-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+}
+
+/* Quitar puntos */
+.div-op ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Separación entre opciones */
+.div-op ul li {
+  margin-bottom: 25px;
+}
+
+/* Icono + texto opción */
+.div-op ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.div-op ul li img {
+  width: 24px;
+  opacity: 0.8;
+}
+
+/* ========= FEED CENTRAL ========= */
+
+.feed {
+  flex-grow: 1;
+  max-width: 600px;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.post-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* ========= CARD DE POST ========= */
+
+.post-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+  color: #26053b;
+}
+
+/* Header del post: nombre + fecha */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-header h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.post-date {
+  font-size: 11px;
+  color: #888;
+}
+
+/* Texto del post */
+.post-description {
+  margin: 10px 0 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Media (imagen / video) */
+.post-media {
+  margin-top: 8px;
+}
+
+.post-image,
+.post-video {
+  width: 100%;
+  border-radius: 14px;
+  max-height: 380px;
+  object-fit: cover;
+}
+
+/* ========= ACCIONES (LIKE / COMENTARIOS) ========= */
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Botón Me gusta */
+.btn-like {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4b1d70;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.1s ease;
+}
+
+.btn-like:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(75, 29, 112, 0.4);
+  opacity: 0.95;
+}
+
+.btn-like:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* Estado "liked" */
+.btn-like.liked {
+  background-color: #f1e5ff;
+  color: #4b1d70;
+  box-shadow: none;
+}
+
+.comment-count {
+  color: #666;
+  font-size: 12px;
+}
+
+/* ========= SECCIÓN DE COMENTARIOS ========= */
+
+.comments-section {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+}
+
+/* Lista de comentarios */
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.comment-list li {
+  background-color: #f5f1fb;
+  border-radius: 14px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #333;
+}
+
+.comment-list li strong {
+  color: #4b1d70;
+}
+
+/* Cuando no hay comentarios */
+.no-comments {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  margin: 4px 0 8px;
+}
+
+/* Formulario de comentario */
+.comment-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+
+.comment-form input:focus {
+  border-color: #4b1d70;
+  box-shadow: 0 0 0 2px rgba(75, 29, 112, 0.15);
+}
+
+.comment-form button {
+  border: none;
+  border-radius: 999px;
+  background-color: #4b1d70;
+  color: #fff;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  opacity: 0.9;
+}
+
+/* Errores en formularios */
+.form-error,
+.global-error {
+  font-size: 12px;
+  color: #b00020;
+  margin: 4px 0 6px;
+}
+
+.global-error {
+  background-color: rgba(176, 0, 32, 0.08);
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+/* ========= PANEL DERECHO (RECOMENDADOS) ========= */
+
+.div-user {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  width: 220px;
+  height: fit-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+}
+
+.div-user h3 {
+  margin-top: 0;
+  color: #26053b;
+}
+
+/* Lista sin viñetas */
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Usuario sugerido */
+.user-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Icono del usuario */
+.user-list li img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+/* ========= BOTÓN FLOTANTE CREAR POST ========= */
+
+.btn-crear-post {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4b1d70;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+/* si por alguna razón lo renderizás dentro de un <li>, evitamos que herede estilos raros */
+.div-op .btn-crear-post {
+  background-color: #4b1d70;
+  color: #ffffff;
+}
+
+.btn-crear-post:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+  opacity: 0.96;
+}
+
+.btn-crear-post:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+/* ========= LAYOUT PRINCIPAL ========= */
+
+.main-container {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* ========= LAYOUT PRINCIPAL ========= */
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  gap: 40px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* ========= PANEL IZQUIERDO FULL HEIGHT + PEGADO ========= */
+.div-op {
+  background-color: white;
+  border-radius: 0 25px 25px 0;
+  width: 260px;
+  height: 100vh;
+  padding: 50px 30px;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+/* ========= PANEL DERECHO FULL HEIGHT + PEGADO ========= */
+.div-user {
+  background-color: white;
+  border-radius: 25px 0 0 25px;
+  width: 260px;
+  height: 100vh;
+  padding: 50px 30px;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+/* ========= ESPACIO DEL FEED CENTRO ========= */
+.feed {
+  flex-grow: 1;
+  max-width: 600px;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  margin-left: 300px;  /* espacio por panel izquierdo */
+  margin-right: 300px; /* espacio por panel derecho */
+  color: white;
+}
+
+/* ========= BOTÓN FLOTANTE PARA CREAR PUBLICACIÓN ========= */
+.btn-crear-post-float {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  color: #26053b;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: 0.2s ease-in-out;
+  z-index: 9999;
+}
+
+.btn-crear-post-float:hover {
+  transform: translateX(-50%) scale(1.12);
+}
